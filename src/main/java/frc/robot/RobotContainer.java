@@ -24,7 +24,7 @@ public class RobotContainer {
   arm armSubsystem = new arm();
   XboxController controller = new XboxController(0);
   Claw pinchSubsystem = new Claw();
-  pinchCommand pinch = new pinchCommand(pinchSubsystem);
+  pinchCommand pinch = new pinchCommand(pinchSubsystem, controller);
   unPinchCommand unPinch = new unPinchCommand();
   controlArm armControl = new controlArm(armSubsystem, controller);
   

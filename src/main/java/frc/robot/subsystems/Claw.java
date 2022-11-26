@@ -34,7 +34,7 @@ public int getPinchyBoi;
     // This method will be called once per scheduler run
   }
 
-  public void drive(double x){
+  public void drivePinchyBoi(double x){
       pinchyBoi.drivePercentOutput(x);
   }
 
