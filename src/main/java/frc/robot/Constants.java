@@ -66,7 +66,7 @@ public final class Constants {
             }
 
             public static final class RightFollower {
-                public static final int CAN_ID = 11; //11
+                public static final int CAN_ID = 4; //4
                 public static final double KP = 0;
                 public static final double KI = 0;
                 public static final double KD = 0;
