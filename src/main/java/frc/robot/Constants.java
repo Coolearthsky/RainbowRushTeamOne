@@ -71,7 +71,7 @@ public final class Constants {
                 public static final double KI = 0;
                 public static final double KD = 0;
                 public static final double KF = 0;
-                public static final InvertType INVERTED = InvertType.None;
+                public static final InvertType INVERTED = InvertType.InvertMotorOutput;
                 public static final boolean SENSOR_PHASE = false;
                 public static final double PEAK_OUTPUT_FORWARD = 0.1;
                 public static final double PEAK_OUTPUT_REVERSE = -0.1;

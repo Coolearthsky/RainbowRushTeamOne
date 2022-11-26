@@ -27,7 +27,7 @@ public class unPinchCommand extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    claw1.drivePinchyBoi(controller1.getLeftX());
+    claw1.drivePinchyBoi(controller1.getAButtonPressed());
   }
   
 

@@ -15,15 +15,14 @@ public int getPinchyBoi;
   /** Creates a new claw. */
   public Claw() {
     pinchyBoi = new Servo(0);
-
   }
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
   }
 
-  public void drivePinchyBoi(double x){
-      pinchyBoi.set(x);
+  public void drivePinchyBoi(boolean b){
+      pinchyBoi.get();
   }
 
 
