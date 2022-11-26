@@ -36,7 +36,7 @@ public final class Constants {
             }
 
             public static final class LeftFollower {
-                public static final int CAN_ID = 18; //19
+                public static final int CAN_ID = 0; //19
                 public static final double KP = 0;
                 public static final double KI = 0;
                 public static final double KD = 0;
