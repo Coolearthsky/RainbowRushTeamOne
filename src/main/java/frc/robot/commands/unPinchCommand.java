@@ -5,11 +5,16 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.Claw;
 
 public class unPinchCommand extends CommandBase {
+  Claw claw1;
   /** Creates a new sussyAmongUsBalls. */
-  public unPinchCommand() {
+  public unPinchCommand(Claw c) {
     // Use addRequirements() here to declare subsystem dependencies.
+    claw1 = c;
+
+    addRequirements(claw1);
   }
 
   // Called when the command is initially scheduled.
@@ -18,7 +23,10 @@ public class unPinchCommand extends CommandBase {
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
-  public void execute() {}
+  public void execute() {
+    claw1.drivePinchyBoi(80);
+  }
+  
 
   // Called once the command ends or is interrupted.
   @Override

@@ -3,16 +3,18 @@
 // the WPILib BSD license file in the root directory of this project.
 
 package frc.robot.commands;
-
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Claw;
 
 public class pinchCommand extends CommandBase {
-  Claw claw;
+  Claw claw1;
   /** Creates a new pinchCommand. */
   public pinchCommand(Claw c) {
     // Use addRequirements() here to declare subsystem dependencies.
-    claw = c;
+    claw1 = c;
+
+
+    addRequirements(claw1);
   }
 
   // Called when the command is initially scheduled.
@@ -23,11 +25,9 @@ public class pinchCommand extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    claw.drive(0.2);
-    if(claw.getPinchyBoi == 1){
-      System.out.println("true");
+    claw1.drivePinchyBoi(90);
   }
-  }
+  
 
   // Called once the command ends or is interrupted.
   @Override

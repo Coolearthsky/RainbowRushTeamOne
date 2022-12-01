@@ -36,7 +36,7 @@ public final class Constants {
             }
 
             public static final class LeftFollower {
-                public static final int CAN_ID = 18; //19
+                public static final int CAN_ID = 0; //19
                 public static final double KP = 0;
                 public static final double KI = 0;
                 public static final double KD = 0;
@@ -66,12 +66,12 @@ public final class Constants {
             }
 
             public static final class RightFollower {
-                public static final int CAN_ID = 11; //11
+                public static final int CAN_ID = 4; //4
                 public static final double KP = 0;
                 public static final double KI = 0;
                 public static final double KD = 0;
                 public static final double KF = 0;
-                public static final InvertType INVERTED = InvertType.None;
+                public static final InvertType INVERTED = InvertType.InvertMotorOutput;
                 public static final boolean SENSOR_PHASE = false;
                 public static final double PEAK_OUTPUT_FORWARD = 0.1;
                 public static final double PEAK_OUTPUT_REVERSE = -0.1;

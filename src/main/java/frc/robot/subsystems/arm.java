@@ -63,8 +63,8 @@ public class arm extends SubsystemBase {
   public void getLeftyRighty(){
     leftyRighty.getSelectedSensorPosition();
   }
-  public void driveSpinnyBoi(double i){
-    spinnyBoi.drivePercentOutput(i);
+  public void driveSpinnyBoi(double d){
+    spinnyBoi.drivePercentOutput(d);
   }
   public void getSpinnyBoi(){
     spinnyBoi.getSelectedSensorPosition();
