@@ -20,20 +20,17 @@ public class Claw extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
+      
   }
 
   public void drivePinchyBoi(double bisadumbdameforadouble){
-      pinchyBoi.setAngle(bisadumbdameforadouble);;
+      pinchyBoi.setAngle(bisadumbdameforadouble);
   }
-
-  public void setPinchyBoi(double bisadumbdameforadouble){
-    pinchyBoi.set(bisadumbdameforadouble);;
-}
 
 
   public void getPinchyBoi(){
     pinchyBoi.get();
-}
+  }
 
   
 }
