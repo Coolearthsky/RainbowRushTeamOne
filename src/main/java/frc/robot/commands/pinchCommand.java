@@ -3,19 +3,16 @@
 // the WPILib BSD license file in the root directory of this project.
 
 package frc.robot.commands;
-
-import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Claw;
 
 public class pinchCommand extends CommandBase {
   Claw claw1;
-  XboxController controller1;
   /** Creates a new pinchCommand. */
-  public pinchCommand(Claw c, XboxController controller) {
+  public pinchCommand(Claw c) {
     // Use addRequirements() here to declare subsystem dependencies.
     claw1 = c;
-    controller1 = controller;
+
 
     addRequirements(claw1);
   }
@@ -28,7 +25,7 @@ public class pinchCommand extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    claw1.drivePinchyBoi(controller1.getAButtonReleased());
+    claw1.drivePinchyBoi(90);
   }
   
 

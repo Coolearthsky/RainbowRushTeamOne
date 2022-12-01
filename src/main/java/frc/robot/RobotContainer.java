@@ -2,7 +2,7 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package frc.robot;
+package frc.robot; 
 
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.controlArm;
@@ -24,18 +24,22 @@ public class RobotContainer {
   arm armSubsystem = new arm();
   XboxController controller = new XboxController(0);
   Claw pinchSubsystem = new Claw();
-  pinchCommand pinch = new pinchCommand(pinchSubsystem, controller);
-  unPinchCommand unPinch = new unPinchCommand(pinchSubsystem, controller);
+  pinchCommand pinch = new pinchCommand(pinchSubsystem);
+  unPinchCommand unPinch = new unPinchCommand(pinchSubsystem);
   controlArm armControl = new controlArm(armSubsystem, controller);
   
-  public final XboxController m_joystick = new XboxController(0);
-    final JoystickButton l2 = new JoystickButton(m_joystick, 0);
+  public final XboxController m_Controller = new XboxController(0);
+    final JoystickButton buttonA = new JoystickButton(m_Controller, 1);
+    final JoystickButton buttonB = new JoystickButton(m_Controller, 2);
 
   
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the button bindings
-  armSubsystem.setDefaultCommand(armControl);    
+  // armSubsystem.setDefaultCommand(armControl);
+  
+  buttonA.whileHeld(pinch);
+  buttonB.whileHeld(unPinch);
     
   }
 

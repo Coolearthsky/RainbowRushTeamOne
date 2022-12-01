@@ -10,20 +10,25 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Claw extends SubsystemBase {
   public Servo pinchyBoi;
-public int getPinchyBoi;
+  public int getPinchyBoi;
 
   /** Creates a new claw. */
   public Claw() {
     pinchyBoi = new Servo(0);
   }
+
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
   }
 
-  public void drivePinchyBoi(boolean b){
-      pinchyBoi.get();
+  public void drivePinchyBoi(double bisadumbdameforadouble){
+      pinchyBoi.setAngle(bisadumbdameforadouble);;
   }
+
+  public void setPinchyBoi(double bisadumbdameforadouble){
+    pinchyBoi.set(bisadumbdameforadouble);;
+}
 
 
   public void getPinchyBoi(){
